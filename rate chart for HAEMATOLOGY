@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minimum Rate Chart Suggestion Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        input[type="text"], input[type="number"], select {
+            width: 95%;
+            padding: 8px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hematology Tests Minimum Rate Chart</h1>
+    <p>Kindly provide your input for the minimum rate chart for hematology tests in rural and urban areas. Your suggestions will help establish a fair and consistent pricing structure.</p>
+
+    <form action="submit_form.php" method="post">
+        <label for="name">Name of Pathology Center:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="contact_person">Contact Person Name:</label><br>
+        <input type="text" id="contact_person" name="contact_person" required><br><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="text" id="phone" name="phone" required><br><br>
+
+        <table>
+            <tr>
+                <th>Test Name</th>
+                <th>Suggested Rate (Rural)</th>
+                <th>Suggested Rate (Urban)</th>
+            </tr>
+            <tr>
+                <td>Complete Blood Count (CBC)</td>
+                <td><input type="number" name="cbc_rural" placeholder="₹200"></td>
+                <td><input type="number" name="cbc_urban" placeholder="₹300"></td>
+            </tr>
+            <tr>
+                <td>Hemoglobin (Hb)</td>
+                <td><input type="number" name="hb_rural" placeholder="₹50"></td>
+                <td><input type="number" name="hb_urban" placeholder="₹70"></td>
+            </tr>
+            <tr>
+                <td>Erythrocyte Sedimentation Rate (ESR)</td>
+                <td><input type="number" name="esr_rural" placeholder="₹50"></td>
+                <td><input type="number" name="esr_urban" placeholder="₹70"></td>
+            </tr>
+            <tr>
+                <td>Platelet Count</td>
+                <td><input type="number" name="platelet_rural" placeholder="₹100"></td>
+                <td><input type="number" name="platelet_urban" placeholder="₹150"></td>
+            </tr>
+        </table>
+
+        <input type="submit" value="Submit Suggestions">
+    </form>
+
+    <p>Thank you for your valuable suggestions! Together, we can create a transparent and fair pricing structure for hematology tests.</p>
+</body>
+</html>
